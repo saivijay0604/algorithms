@@ -1,50 +1,49 @@
 
 from random import *
 import numpy as np
+import time
 
 
 def game():
-    player = int(input("Select the number from the list:"))
+    player = int(input("Pick one number from the list:"))
     if (player is numbers):
-        print("you win")
+        print(" WIN ")
     else:
-        print("you loss")
-        print("Number:",numbers)
+        print("Winning Number:",numbers)
+        print("Try Again")
 
-def random():
+def random_Num_Selection():
     global numbers
     random_nums = list()
     for i in range(5):
         numbers = randrange(1, 50)
         random_nums.append(int(numbers))
-    global a
-    a=set(random_nums)
-    print(type(a))
-    print("pick one from the list:",a)
-    #print("list:",random_nums)
+    a_set=set(random_nums)
+    time.sleep(0.50)
+    print("\n\tStart the Game\t")
+    time.sleep(0.80)
+    print(" NUMBERS : ",a_set)
 while True:
-    play_nextgame = input("\n**Want to play New Game YES or NO \n type (y or n)**:")
-    while(play_nextgame.lower() != 'y'  and play_nextgame.lower() != 'n'):
-        play_nextgame = input("please select (y/n) :")
-    if (play_nextgame.lower() == 'y'):
-        print("$$$ Lets Play $$$")
-        print("1$ to play :) ")
-        amount = int(input("Insert amount:"))
+    play_nextgame = input("\n**Want to play New Game '$' only** \n  CLICK (Y/N):")
+    if(play_nextgame.lower() != 'y'  and play_nextgame.lower() != 'n'):
+        play_nextgame = input("Please CLICK (Y/N) :")
+    if (play_nextgame.lower() == ('y' or 'Y')):
+        print("\n \t$$$ Lets Play $$$\t")
+        print("\t\t1$ to play\t\t")
+        amount = int(input("\tInsert amount:"))
         if amount > 1:
-            print("collect the change:", amount - 1, "$")
-        random()  # random numbers function
+            print("Collect the change:", amount - 1,"$")
+        random_Num_Selection()  # random numbers function
         if amount == 1:
-            print(" start ")
             game()
         else:
-            print(" start ")
             game()
-    elif (play_nextgame.lower() == 'n'):
-        print("Thank You")
+    elif (play_nextgame.lower() == ('n' or 'N')):
+        print("\tThank You\t")
         break
     else:
         pass
-    ###git
+
 
 
 
