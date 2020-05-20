@@ -9,8 +9,9 @@ def maxNumber(x,y):
         print ("max number is:", num)
         return False
 
-arr = array([1,2,3,4,5,6])
+arr = array([1,2,3,4,5,6])#array
 print("list of numbers: ", arr)
 num = int(input("Enter the number:"))
 maxNumber(arr,num)
+
 
