@@ -1,17 +1,17 @@
 from numpy import *
 def maxNumber(x,y):
-    max_num= max(arr)
-    print("max number from the array:",max_num)
-    if max_num >= num :
-        print("max number is:",max_num)
-        return True
-    else:
-        print ("max number is:", num)
+    if max(x) >= y:
         return False
+    return True
 
-arr = array([1,2,3,4,5,6])#array
+arr = array([10,22,113,14,95,6])#array
 print("list of numbers: ", arr)
-num = int(input("Enter the number:"))
-maxNumber(arr,num)
+num = 30
+print(maxNumber(arr,num))
+for i in range(len(arr)):
+    newNum = arr[i]+ num
+    print("new elements:", newNum)
+    print(maxNumber(arr, newNum))
+
 
 
