@@ -7,8 +7,8 @@ from range import *
 
 im1 = Image.open(r"C:\Users\saivi\Desktop\photos\amma.jpg")
 im2 = Image.open(r"C:\Users\saivi\Desktop\photos\me.JPG")
-#im1.show()
-#im2.show()
+im1.show()
+im2.show()
 
 
 def get_concat_h(im1, im2):
