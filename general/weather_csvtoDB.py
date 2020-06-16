@@ -10,7 +10,7 @@ df = pd.DataFrame(data, columns= ['ID_Num',
                                   'Humidity',
                                   'Windy',
                                   'Play'])
-conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};' #DB connection start
+conn = pyodbc.connect('Driver={SQL Server};' #DB connection start
                       'Server=127.0.0.1;'
                       'port=1433;'
                       'Database=dbPractice2;'
